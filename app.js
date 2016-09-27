@@ -1,5 +1,5 @@
 var mongojs = require("mongojs");
-var db = mongojs('mongodb://lucas:rooney10@ds041536.mlab.com:41536/mygame', ['account','progress']);
+var db = mongojs('mongodb://heroku_t9n8hnr1:rooney10@ds041536.mlab.com:41536/heroku_t9n8hnr1', ['account','progress']);
 
 var express = require('express');
 var app = express();
