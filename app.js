@@ -1,5 +1,5 @@
-// var mongojs = require("mongojs");
-var db = null; //mongojs('mongodb://lucas:rooney10@ds041536.mlab.com:41536/mygame', ['account','progress']);
+var mongojs = require("mongojs");
+var db = mongojs('mongodb://lucas:rooney10@ds041536.mlab.com:41536/mygame', ['account','progress']);
 
 var express = require('express');
 var app = express();
@@ -231,28 +231,28 @@ Bullet.getAllInitPack = function(){
 var DEBUG = true;
 
 var isValidPassword = function(data,cb){
-	return cb(true);
-	/*db.account.find({username:data.username,password:data.password},function(err,res){
+	// return cb(true);
+	db.account.find({username:data.username,password:data.password},function(err,res){
 		if(res.length > 0)
 			cb(true);
 		else
 			cb(false);
-	});*/
+	});
 }
 var isUsernameTaken = function(data,cb){
-	return cb(false);
-	/*db.account.find({username:data.username},function(err,res){
+	// return cb(false);
+	db.account.find({username:data.username},function(err,res){
 		if(res.length > 0)
 			cb(true);
 		else
 			cb(false);
-	});*/
+	});
 }
 var addUser = function(data,cb){
-	return cb();
-	/*db.account.insert({username:data.username,password:data.password},function(err){
+	// return cb();
+	db.account.insert({username:data.username,password:data.password},function(err){
 		cb();
-	});*/
+	});
 }
 
 var io = require('socket.io')(serv,{});
