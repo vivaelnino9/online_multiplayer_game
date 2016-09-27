@@ -1,5 +1,5 @@
-// var mongojs = require("mongojs");
-var db = null;//mongojs('mongodb://lucas:rooney10@ds041536.mlab.com:41536/mygame', ['account','progress']);
+var mongojs = require("mongojs");
+var db = null;mongojs('mongodb://lucas:rooney10@ds041536.mlab.com:41536/mygame', ['account','progress']);
 
 var express = require('express');
 var app = express();
@@ -232,27 +232,27 @@ var DEBUG = true;
 
 var isValidPassword = function(data,cb){
 	return cb(true);
-	/*db.account.find({username:data.username,password:data.password},function(err,res){
+	db.account.find({username:data.username,password:data.password},function(err,res){
 		if(res.length > 0)
 			cb(true);
 		else
 			cb(false);
-	});*/
+	});
 }
 var isUsernameTaken = function(data,cb){
 	return cb(false);
-	/*db.account.find({username:data.username},function(err,res){
+	db.account.find({username:data.username},function(err,res){
 		if(res.length > 0)
 			cb(true);
 		else
 			cb(false);
-	});*/
+	});
 }
 var addUser = function(data,cb){
 	return cb();
-	/*db.account.insert({username:data.username,password:data.password},function(err){
+	db.account.insert({username:data.username,password:data.password},function(err){
 		cb();
-	});*/
+	});
 }
 
 var io = require('socket.io')(serv,{});
