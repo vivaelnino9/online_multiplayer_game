@@ -2,6 +2,6 @@
 
 ![Alt text](/Demo/signin.png?raw=true "SignIn Page")
 
-![Alt text](/Demo/game1.png?raw=true "Game Page")
+![Alt text](/Demo/1.png?raw=true "Game Page")
 
-![Alt text](/Demo/game2.png?raw=true "Game Page")
+![Alt text](/Demo/2.png?raw=true "Game Page")
