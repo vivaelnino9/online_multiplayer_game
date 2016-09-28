@@ -4,4 +4,4 @@
 
 ![Alt text](/Demo/game.png?raw=true "Game Page")
 
-![Alt text](/Demo/game2.png?raw=true "Game Page")
+![Alt text](/Demo/game_2.png?raw=true "Game Page")
