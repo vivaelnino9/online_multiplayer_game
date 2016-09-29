@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="client/css/style.css">
+
 <div id="signDiv">
 	Username: <input id="signDiv-username" type="text"></input><br>
 	Password: <input id="signDiv-password" type="password"></input>
@@ -6,11 +8,11 @@
 </div>
 
 <div id="gameDiv" style="display:none;">
-	<div id="game" style="position:absolute;width:500px;height:500px">
-		<canvas id="ctx" width="500" height="500" style="position:absolute;border:1px solid #000000;"></canvas>
-		<canvas id="ctx-ui" width="500" height="500" style="position:absolute;border:1px solid #000000;"></canvas>
+	<div id="game">
+		<canvas id="ctx" width="500" height="500"></canvas>
+		<canvas id="ctx-ui" width="500" height="500"></canvas>
 
-		<div id="ui" style="position:absolute;width:500px;height:500px;">
+		<div id="ui">
 			<!-- <button onclick="changeMap()" style="position:absolute;bottom:0px;left:0px">
 				Change Map
 			</button> -->
@@ -19,13 +21,13 @@
 
 	</div>
 
-	<div id="belowGame" style="margin-top:520px">
-		<div id="chat-text" style="width:500px;height:100px;overflow-y:scroll">
+	<div id="belowGame">
+		<div id="chat-text">
 			<div>Hello!</div>
 		</div>
 
 		<form id="chat-form">
-			<input id="chat-input" type="text" style="width:500px"></input>
+			<input id="chat-input" type="text"></input>
 		</form>
 	</div>
 </div>
@@ -47,7 +49,8 @@
 	var username = null;
 
 	signDivSignIn.onclick = function(){
-		socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+		// socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+		socket.emit('signIn',{username:'lucas',password:'rooney10'});
 	}
 	signDivSignUp.onclick = function(){
 		socket.emit('signUp',{username:signDivUsername.value,password:signDivPassword.value});

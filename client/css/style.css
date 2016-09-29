@@ -1,0 +1,22 @@
+div#game, div#ui {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+div#belowGame {
+    background-color: #d3d3d3;
+    margin-top: 520px;
+}
+div#chat-text {
+    width: 500px;
+    height: 100px;
+    overflow-y: scroll;
+}
+canvas#ctx, canvas#ctx-ui {
+    position: absolute;
+    border: 1px solid #000000;
+}
+input#chat-input {
+    background-color: #bdbdbd;
+    width: 500px;
+}
