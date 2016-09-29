@@ -297,7 +297,8 @@ io.sockets.on('connection', function(socket){
 		isValidPassword(data,function(res){
 			if(res){
 				Player.onConnect(socket);
-				socket.emit('signInResponse',{success:true});
+				// socket.emit('signInResponse',{success:true});
+				socket.emit('signInResponse',{success:true,username:data.username,});
 			} else {
 				socket.emit('signInResponse',{success:false});
 			}
@@ -321,9 +322,8 @@ io.sockets.on('connection', function(socket){
 		Player.onDisconnect(socket);
 	});
 	socket.on('sendMsgToServer',function(data){
-		var playerName = ("" + socket.id).slice(2,7);
 		for(var i in SOCKET_LIST){
-			SOCKET_LIST[i].emit('addToChat',playerName + ': ' + data);
+			SOCKET_LIST[i].emit('addToChat',data.name + ': ' + data.value);
 		}
 	});
 
