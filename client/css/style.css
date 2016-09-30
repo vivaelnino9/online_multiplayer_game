@@ -17,13 +17,13 @@
 
 div#game, div#ui {
     position: absolute;
-    margin: 50px 150px 0px 470px;
+    /*margin: 50px 150px 0px 470px;*/
     width: 500px;
     height: 500px;
 }
 div#belowGame {
     background-color: #d3d3d3;
-    margin: 532px 150px 0px 470px;
+    margin: 482px 150px 0px 0px;
     border-width: 0px .5px .5px .5px;
     border-style: solid;
 }
