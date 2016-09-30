@@ -276,7 +276,7 @@ var isUsernameTaken = function(data,cb){
 	// return cb(false);
 
 			db.account.find({username:data.username},function(err,res){
-		if(res.length > 0 && data.username.length > 1)
+		if(res.length > 0 && data.username !== "")
 			cb(true);
 		else
 			cb(false);
