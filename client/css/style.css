@@ -1,22 +1,77 @@
+/* Fonts*/
+
+
+/* username & pass */
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
+
+/* signin & signup */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+/* chat */
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* endfonts*/
+
 div#game, div#ui {
     position: absolute;
+    /*margin: 50px 150px 0px 470px;*/
     width: 500px;
     height: 500px;
 }
 div#belowGame {
     background-color: #d3d3d3;
-    margin-top: 520px;
+    margin: 482px 150px 0px 0px;
+    border-width: 0px .5px .5px .5px;
+    border-style: solid;
 }
 div#chat-text {
     width: 500px;
     height: 100px;
     overflow-y: scroll;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+div#signDiv {
+    font-size: 30px;
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #d3d3d3;
+    margin: 100px 450px 0px 450px;
+    /*border: 1.5px solid #000;*/
 }
 canvas#ctx, canvas#ctx-ui {
     position: absolute;
     border: 1px solid #000000;
 }
 input#chat-input {
-    background-color: #bdbdbd;
+    background-color: #c3c3c3;
     width: 500px;
+    outline: none;
+    border-width: .5px 0px 0px 0px;
+    border-style: solid;
+    border-color: #afafaf;
+    position: fixed;
+}
+input#signDiv-username, input#signDiv-password {
+    padding: 10px;
+    border: solid 1px #ccc;
+    box-shadow: inset 1px 1px 2px 0 #707070;
+    transition: box-shadow 0.3s;
+    font-size: 15px;
+    border-radius: 8px;
+}
+input#signDiv-username:focus, input#signDiv-username.focus, input#signDiv-password:focus, input#signDiv-password.focus {
+    box-shadow: inset 1px 1px 2px 0 #ccc;
+    outline: none;
+}
+button#signDiv-signIn, button#signDiv-signUp {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
 }
