@@ -259,6 +259,7 @@
 	var drawScore = function(){
 		if(lastScore === Player.list[selfId].score)
 			return;
+		ctxUi.clearRect(0,0,500,500);
 		lastScore = Player.list[selfId].score;
 		ctxUi.fillStyle = 'white';
 		ctxUi.fillText(Player.list[selfId].score,0,30);
