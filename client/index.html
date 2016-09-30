@@ -49,8 +49,8 @@
 	var username = null;
 
 	signDivSignIn.onclick = function(){
-		socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
-		// socket.emit('signIn',{username:'lucas',password:'rooney10'});
+		//socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+		socket.emit('signIn',{username:'lucas',password:'rooney10'});
 	}
 	signDivSignUp.onclick = function(){
 		socket.emit('signUp',{username:signDivUsername.value,password:signDivPassword.value});
